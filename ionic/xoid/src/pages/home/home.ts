@@ -8,6 +8,10 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
+  private currency: string;
+  private serial: string;
+  private xoid: string;
+  
   constructor(public navCtrl: NavController) {
     
   }

@@ -1,14 +1,58 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      XOID
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-slides pager>
+  
+  <ion-slide id="sld01">
+    <img class="slide-image" src="assets/images/wizard-of-id.jpg">
+    <h2>Welcome to XOID!</h2>
+    <p>TODO: The <b>X OpenID</b> showcases a number of useful free methods to implement OpenId specifications</p>
+  </ion-slide>
+  <ion-slide id="sld10">
+    <img class="slide-image" src="assets/images/OpenID_logo_2.svg" style="margin-top: 20%">
+    <h2>What is OpenID?</h2>
+    <a href="http://openid.net/get-an-openid/what-is-openid/" target="_blank">http://openid.net</a>
+    <p>OpenID allows you to use an existing account to sign in to multiple websites, without needing to create new passwords.
+  </ion-slide>
+  <ion-slide id="sld10">
+    <img class="slide-image" src="assets/images/OpenID_logo_2.svg" style="margin-top: 20%">
+    <h2>Complicated but promissing, right?</h2>
+    <p>Don't worry let making one, right now...<p>
+      <p>OpenID is an open standard and decentralized authentication protocol.</p>
+      <p>Promoted by the non-profit OpenID Foundation, it allows users to be authenticated by co-operating sites (known as Relying Parties or RP) using a third party service, eliminating the need for webmasters to provide their own ad hoc login systems, and allowing users to log in to multiple unrelated websites without having to have a separate identity and password for each.</p>
+  </ion-slide>
+  <ion-slide id="sld20">
+    <h2>Setup</h2>
+    <ion-item>
+      <ion-label>Currency</ion-label>
+    <ion-select [(ngModel)]="currency" style="max-width: 80%;">
+      <ion-option value="IRR">Iran Rial</ion-option>
+      <ion-option value="USD">United States Dollar</ion-option>
+    </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Serial</ion-label>
+      <ion-input type="text" [(ngModel)]="serial"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>XOID</ion-label>
+      <ion-input type="text" [(ngModel)]="xoid" value="{{currency}}{{serial}}" readonly></ion-input>
+      <ion-label></ion-label>
+    </ion-item>
+    
+  </ion-slide>
+
+  <ion-slide id="sld30">
+    <h2>Ready?</h2>
+    <button ion-button clear>Primary Clear</button>
+
+  </ion-slide>
+
+</ion-slides>
 </ion-content>
